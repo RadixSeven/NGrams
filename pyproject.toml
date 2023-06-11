@@ -1,0 +1,27 @@
+[project]
+name = "N-Grams"
+version = "1.0.0"
+authors = [
+    {name = "Eric Moyer", email = "compu.moyer@gmail.com"},
+]
+description = "Character-level n-gram extraction"
+readme = "README.md"
+requires-python = ">=3.11"
+keywords = ["n-gram", "nlp", "natural language processing", "character-level", "ngram"]
+dynamic = ["dependencies"]
+classifiers = [
+    "Development Status :: 7 - Inactive",
+    "License :: OSI Approved :: Apache Software License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.11",
+]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.black]
+line-length = 88
+target-version = ['py311']
+include = '\.py$|\.pyi$'
